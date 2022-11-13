@@ -24,9 +24,9 @@ def main(fname):
         print ("Spliting data...")
         X_train, X_test, y_train, y_test =  train_test_split(X, y, test_size=0.5, random_state = 5)
 
-        # scaler = preprocessing.MinMaxScaler()
-        # X_train = scaler.fit_transform(X_train)
-        # X_test = scaler.fit_transform(X_test)
+        scaler = preprocessing.MaxAbsScaler()
+        X_train = scaler.fit_transform(X_train)
+        X_test = scaler.fit_transform(X_test)
 
         # cria um kNN
         neigh = KNeighborsClassifier(n_neighbors=3, metric='euclidean')
