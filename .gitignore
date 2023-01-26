@@ -129,5 +129,5 @@ dmypy.json
 .pyre/
 *.jpg
 *.csv
-*.vscode
+# *.vscode
 *.~lock*
